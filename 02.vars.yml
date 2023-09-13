@@ -10,7 +10,7 @@
 - name: Demo on file Variable
   hosts: all
   vars_files:
-    -sample.vars.yml
+    - sample.vars.yml
   tasks:
     - name: Print URL
       ansible.builtin.debug:
