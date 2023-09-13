@@ -25,3 +25,9 @@
       vars:
         URL: task.example.com
 
+- name: Variable on inventory
+  hosts: all
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL == {{ URL }}
