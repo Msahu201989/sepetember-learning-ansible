@@ -6,3 +6,13 @@
     - name: Print URL
       ansible.builtin.debug:
         msg: URL = {{ URL }} # In ansible {{}} this way we access Variable in Shell we used $
+
+- name: Demo on file Variable
+  hosts: all
+  vars_file:
+    -sample.vars.yml
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
+
