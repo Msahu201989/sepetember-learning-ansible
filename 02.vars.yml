@@ -1,0 +1,8 @@
+- name: Demo on Variables
+  hosts: all
+  vars:
+    URL: play.example.com # declaration of Variable & below is accessing of Variable
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{ URL }} # In ansible {{}} this way we access Variable in Shell we used $
