@@ -1,6 +1,11 @@
 - name: Demo on loops
   hosts: localhost
-  task:
+  tasks:
     - name: Print debug
       ansible.builtin.debug:
         msg: Hello World
+      loop:
+        - apple
+        - banana
+        - orange
+        - mango
